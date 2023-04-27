@@ -1,0 +1,13 @@
+{
+    "name": "endava/oopa_animals",
+    "type": "project",
+    "description": "Object Oriented Animals test.",
+    "require": {
+        "php": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Utils\\": "src/Utils/"
+        }
+    }
+}
