@@ -1,14 +1,24 @@
 {
-    "name": "endava/oopa_animals",
+    "name": "endava/malbornoz_oopanimals",
+    "description": "Una prueba en endava",
     "type": "project",
     "description": "Object Oriented Animals test.",
     "require": {
         "php": "^5.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
     },
     "autoload": {
         "psr-4": {
             "Utils\\": "src/Utils/",
             "Animals\\": "src/Domain/"
         }
-    }
+    },
+    "authors": [
+        {
+            "name": "Mario Albornoz"
+        }
+    ],
+    "minimum-stability": "dev"
 }
