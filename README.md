@@ -1,9 +1,29 @@
-# oop-animals
-OOP Animals
+# OOP Animals
 
-As part of the recruiting process, we'd like you to complete this simple coding assignment.  Although you are not being timed, our expectation is that you won't need to spend more than a few hours on this exercise.  Please complete it and return to your hiring manager at your earliest convenience.
+## Motivation
 
-In a language of your choice (PHP preferred), please create a command line application that will accept a name and an animal type.  On receiving the input, the application should respond with an appropriate message from that animal.  For example,
+This is part of a recruiting process, where the requirement was to complete this simple coding assignment.
+The expectation is that this should not require more than a few hours to complete.
+
+## Prerequisites
+
+You must have the following installed:
+
+ - PHP 5.6
+ - Composer 2
+ - git is not required but is recomended
+
+## Installation
+
+1. https://github.com/goliathuy/oop-animals
+
+# Requirements
+
+I choosed PHP as was preferred and I'm used to.
+The requirement was to create a command line application that accept a name and an animal type.
+On receiving the input, the application should respond with an appropriate message from that animal.
+
+For example,
 
     # php AnimalProject.php "Mr Pickles" cat
 
