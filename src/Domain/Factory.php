@@ -35,8 +35,8 @@ class Factory
     private function realyCreateAnimal($name, $type) {
         $newAnimal = null;
 
-        if(class_exists("Animals\\" . $type)) {
-            $type = "Animals\\".ucfirst($type);
+        $type = "Animals\\".ucfirst($type);
+        if(class_exists($type)) {
             $newAnimal = new $type($name);
         }
 
