@@ -57,19 +57,4 @@ class ScriptTest extends TestCase
         $this->assertContains(strtolower($NotExisiingType." NOT FOUND"),strtolower($output));
 
     }
-
-    /*
-    public function testPositionalParameters()
-    {
-        # code...
-    }
-    public function testPositionalParameters()
-    {
-        # code...
-    }
-    public function testPositionalParameters()
-    {
-        # code...
-    }
-*/
 }
