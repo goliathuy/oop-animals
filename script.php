@@ -1,16 +1,32 @@
 <?php
 $loader = require_once __DIR__ . '/vendor/autoload.php';
 
-use Utils;
+//use Utils;
+use Utils\Parameters;
 
-echo "Parameters get: ".Utils\Parameters::get();
+try {
+    $parameters = Parameters::get();
+    //No animals show help
+    if($parameters === false) {
+        echo Parameters::usageExample();
+        exit(0);
+    }
 
-/*if (isset($argc)) {
-    echo "This is argc: ";
-    var_dump($argc);
-    echo "\nThis is argv: ";
-    var_dump($argv);
+    echo "Parameters get: ";
+    print_r($parameters);
+
+} catch (LogicException $l) {
+    echo $l->getMessage();
+    exit($l->getCode());
+} catch (InvalidArgumentException $i) {
+    echo $i->getMessage();
+    exit($i->getCode());
+} catch (UnexpectedValueException $u) {
+    echo $u->getMessage();
+    exit($u->getCode());
+} catch (\Throwable $th) {
+    echo "Unexpected error: " . $th->getMessage();
+    exit(1);
+    //throw $th;
 }
-else {
-	echo "argc and argv disabled\n";
-}*/
+
