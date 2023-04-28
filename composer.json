@@ -1,8 +1,7 @@
 {
     "name": "endava/malbornoz_oopanimals",
-    "description": "Una prueba en endava",
+    "description": "Object Oriented Animals assignment.",
     "type": "project",
-    "description": "Object Oriented Animals test.",
     "require": {
         "php": "^5.6"
     },
