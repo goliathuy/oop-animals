@@ -1,19 +1,27 @@
 <?php
 $loader = require_once __DIR__ . '/vendor/autoload.php';
 
-//use Utils;
 use Utils\Parameters;
+use Animals\Factory;
 
 try {
     $parameters = Parameters::get();
+
     //No animals show help
     if($parameters === false) {
         echo Parameters::usageExample();
         exit(0);
     }
 
-    echo "Parameters get: ";
-    print_r($parameters);
+    $factory = Factory::getInstance();
+
+    foreach ($parameters as $key => $animal) {
+        if($oneAnimal = $factory->createAnimal($animal)) {
+            echo $oneAnimal->respond() . "\n";
+        } else {
+            echo $animal['type'] . " NOT FOUND\n";
+        };
+    }
 
 } catch (LogicException $l) {
     echo $l->getMessage();

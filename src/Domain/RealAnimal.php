@@ -20,7 +20,7 @@ trait RealAnimal
 
     public function say()
     {
-        return $this->getName() . " says \"" . $this->getSoundName .'"';
+        return $this->getName() . " says \"" . $this->getSoundName() .'"';
     }
 }
 

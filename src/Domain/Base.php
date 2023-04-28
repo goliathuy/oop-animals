@@ -9,7 +9,6 @@ abstract class Base
     function __construct($name, $type) {
         $this->name = $name;
         $this->type = $type;
-        print "In BaseClass constructor\n";
     }
 
     public function getName()

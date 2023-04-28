@@ -3,7 +3,6 @@ namespace Animals;
 
 trait UnrealAnimal
 {
-
     //Please provide implementation
     abstract public function getType();
 
