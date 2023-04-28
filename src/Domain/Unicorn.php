@@ -3,7 +3,7 @@ namespace Animals;
 
 class Unicorn extends Base
 {
-    private $myType = "Unicorn";
+    private $myType = "Unicorns";
     use UnrealAnimal;
 
     public function __construct($name)
@@ -13,7 +13,7 @@ class Unicorn extends Base
 
     public function respond()
     {
-        return $this->getType() . " (output: " . $this->tell() . ")";
+        return $this->tell();
     }
 }
 

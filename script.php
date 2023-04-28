@@ -17,10 +17,11 @@ try {
 
     foreach ($parameters as $key => $animal) {
         if($oneAnimal = $factory->createAnimal($animal)) {
-            echo $oneAnimal->respond() . "\n";
+            $response = $oneAnimal->respond();
         } else {
-            echo $animal['type'] . " NOT FOUND\n";
+            $response = " NOT FOUND";
         };
+        echo $animal['type'] . " (output: " . $response . ")\n";
     }
 
 } catch (LogicException $l) {

@@ -1,6 +1,7 @@
 <?php
 namespace Animals;
 
+use Exception;
 use UnexpectedValueException;
 
 class Factory
@@ -39,7 +40,6 @@ class Factory
         if(class_exists($type)) {
             $newAnimal = new $type($name);
         }
-
         return $newAnimal;
     }
 }

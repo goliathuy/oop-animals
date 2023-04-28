@@ -16,7 +16,7 @@ class Cat extends Base
 
     public function respond()
     {
-        return $this->getType() . " (output: " . $this->say() . ")";
+        return $this->say();
     }
 }
 
