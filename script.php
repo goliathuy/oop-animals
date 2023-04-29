@@ -19,7 +19,7 @@ try {
         if($oneAnimal = $factory->createAnimal($animal)) {
             $response = $oneAnimal->respond();
         } else {
-            $response = " NOT FOUND";
+            $response = "NOT FOUND";
         };
         echo $animal['type'] . " (output: " . $response . ")\n";
     }

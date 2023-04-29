@@ -23,34 +23,37 @@ Please follow the next steps:
      1. If you have Git you can clone it.  
      1. Else you can download a zip version, and expand its content in the desired folder.  
 1. Once in the project  folder, run the command `composer install`.  
-1. Run the script and verify you see the help details `php script.php --help`.  
-# Requirements
+1. Run the script and verify you see usage and help details `php script.php --help`.  
+## Usage
 
-I choosed PHP as was preferred and I'm used to.
-The requirement was to create a command line application that accept a name and an animal type.
-On receiving the input, the application should respond with an appropriate message from that animal.
+    php .\script.php [options] | <animal_name> <animal_type>
 
-For example,
+### Positional parameters
 
-    # php AnimalProject.php "Mr Pickles" cat
+Specify name and type of the animal in that order directly
 
-    Mr Pickles says "meow"
+    php script.php boby dog
 
-The application must use object inheritance for its implementation
-The application should support at least the following animals
-cat (output: <name> says "meow")
-dog (output: <name> says "woof")
-cow (output: <name> says "moo")
-unicorn (output: Unicorns are not real)
-The application should not fail when an unknown animal name is received
-Unit tests should be included
+### Options
 
-Please also provide instructions on how to build, install and run as appropriate.
+  `-h`, `--help` Display the help message  
+  `-n`, `--name` Animal name  
+  `-t`, `--type` Animal type  
 
-Optionally, feel free to add enhancements.  Some ideas:
+### Multiple animals    
 
-Ability to support new animal types without changing existing code (plug & play animals)
-Ability to persist and reload animals offline (database, file, etc.)
-Ability to create multiple animals at once
-Support for additional attributes for animals (age, height, favorite food, etc.)
-Anything else that showcases your talents
+Both long or short options allow to send multiple animals, see here an example using the long format:
+
+    php script.php --name=boby --type=dog --name=lucy --type=cow
+
+### Additional animals
+
+To include new animals, please refer to `src/Domain` folder and use one of the animals you can find there.
+
+Unicorn is an example of an unreal animal and as such it would not say anything, Cat, Cow and Dog are real animals with the ability to emit their sound
+
+## Testing
+
+To run unit tests run the following code
+
+    vendor/bin/phpunit tests

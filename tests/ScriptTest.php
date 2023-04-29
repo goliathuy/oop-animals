@@ -54,7 +54,7 @@ class ScriptTest extends TestCase
         /**ignoring case for type */
         $this->assertContains(strtolower($Animal1Type),strtolower($output));
         $this->assertContains(strtolower($Animal2Type),strtolower($output));
-        $this->assertContains(strtolower($NotExisiingType." NOT FOUND"),strtolower($output));
+        $this->assertContains(strtolower($NotExisiingType." (output: NOT FOUND"),strtolower($output));
 
     }
 }
