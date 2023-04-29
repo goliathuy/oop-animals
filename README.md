@@ -2,8 +2,7 @@
 
 ## Motivation
 
-This is part of a recruiting process, where the requirement was to complete this simple coding assignment.  
-The expectation is that this should not require more than a few hours to complete.  
+Simple coding assignment, expected only to require a few hours to complete.  
 
 ## Prerequisites
   
@@ -50,10 +49,16 @@ Both long or short options allow to send multiple animals, see here an example u
 
 To include new animals, please refer to `src/Domain` folder and use one of the animals you can find there.
 
-Unicorn is an example of an unreal animal and as such it would not say anything, Cat, Cow and Dog are real animals with the ability to emit their sound
+Unicorn is an example of an unreal animal and as such it would not say anything, Cat, Cow and Dog are real animals with the ability to emit their sound.
 
 ## Testing
 
 To run unit tests run the following code
 
     vendor/bin/phpunit tests
+
+## Known Issues
+
+- At this time the application is may be affected by how the operating system handles capital letters, refrain from using multiple words for the animal type. 
+- The application is not sanitizing any input and as such is susceptible to code injection.
+

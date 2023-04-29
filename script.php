@@ -23,8 +23,8 @@ try {
         };
         echo $animal['type'] . " (output: " . $response . ")\n";
     }
-
 } catch (LogicException $l) {
+    /** Throwing and catching different types of exceptions separately allow options for handling different errors */
     echo $l->getMessage();
     exit($l->getCode());
 } catch (InvalidArgumentException $i) {
@@ -36,6 +36,5 @@ try {
 } catch (\Throwable $th) {
     echo "Unexpected error: " . $th->getMessage();
     exit(1);
-    //throw $th;
 }
 
