@@ -2,21 +2,28 @@
 
 ## Motivation
 
-This is part of a recruiting process, where the requirement was to complete this simple coding assignment.
-The expectation is that this should not require more than a few hours to complete.
+This is part of a recruiting process, where the requirement was to complete this simple coding assignment.  
+The expectation is that this should not require more than a few hours to complete.  
 
 ## Prerequisites
-
-You must have the following installed:
-
- - PHP 5.6
- - Composer 2
- - git is not required but is recomended
+  
+You must have the following installed:  
+  
+ - [PHP 5.6](https://prototype.php.net/versions/5.6/install/)  
+ - [Composer 2](https://getcomposer.org/doc/00-intro.md)  
+ - Optionaly  
+    - [Git](https://github.com/git-guides/install-git) is not required but is recommended, the link refers to github instructions on its installation.  
 
 ## Installation
 
-1. https://github.com/goliathuy/oop-animals
-
+Please follow the next steps:  
+  
+1. Download the source code from the [repository](https://github.com/goliathuy/oop-animals) in a folder, by default it would be oop-animals, let's call it project folder.  
+   Using this file as a reference, it must be located directly in the after mentioned folder.  
+     1. If you have Git you can clone it.  
+     1. Else you can download a zip version, and expand its content in the desired folder.  
+1. Once in the project  folder, run the command `composer install`.  
+1. Run the script and verify you see the help details `php script.php --help`.  
 # Requirements
 
 I choosed PHP as was preferred and I'm used to.
